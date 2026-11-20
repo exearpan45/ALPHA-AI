@@ -1,3 +1,4 @@
+import ownerAvatarUrl from '../assets/images/avatar_owner_1795155667037.jpg';
 import {
   ActivityEvent,
   AgentTool,
@@ -13,7 +14,7 @@ const minsAgo = (m: number) => new Date(now - m * 60_000).toISOString();
 const hoursAgo = (h: number) => new Date(now - h * 3_600_000).toISOString();
 const daysAgo = (d: number) => new Date(now - d * 86_400_000).toISOString();
 
-export const OWNER_AVATAR_PATH = '/src/assets/images/avatar_owner_1795155667037.jpg';
+export const OWNER_AVATAR_PATH = ownerAvatarUrl;
 
 export const DEFAULT_SETTINGS: AppSettings = {
   ownerName: 'Arpan Goswami',
