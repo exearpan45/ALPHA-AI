@@ -1,0 +1,64 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+:root {
+  --alpha-canvas: #F8FAFC;
+  --alpha-surface: #FFFFFF;
+  --alpha-subtle: #F1F5F9;
+  --alpha-border: #E2E8F0;
+  --alpha-ink: #0F172A;
+  --alpha-muted: #64748B;
+}
+
+html[data-theme-variant="mist"] {
+  --alpha-canvas: #F3F6F9;
+  --alpha-surface: #FFFFFF;
+  --alpha-subtle: #E9EFF5;
+  --alpha-border: #DCE3EC;
+}
+
+html[data-theme-variant="alabaster"] {
+  --alpha-canvas: #F7F7F5;
+  --alpha-surface: #FFFFFF;
+  --alpha-subtle: #EFEFED;
+  --alpha-border: #E3E3DF;
+}
+
+html.dark {
+  --alpha-canvas: #0B1120;
+  --alpha-surface: #111827;
+  --alpha-subtle: #1E293B;
+  --alpha-border: #1F2937;
+  --alpha-ink: #F8FAFC;
+  --alpha-muted: #94A3B8;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--alpha-canvas);
+  color: var(--alpha-ink);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

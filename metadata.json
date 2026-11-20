@@ -1,0 +1,6 @@
+{
+  "name": "ALPHA AI",
+  "description": "Personal AI Agent and Knowledge Management Platform — Phase 1 Local-First Frontend Workspace.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
